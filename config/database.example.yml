@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  database: numbers-development
+
+test:
+  <<: *default
+  database: numbers-test
+
+staging:
+  <<: *default
+  database: numbers-staging
+
+production:
+  <<: *default
+  database: numbers-production
